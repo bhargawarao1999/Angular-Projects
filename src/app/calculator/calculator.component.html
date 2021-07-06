@@ -1,0 +1,10 @@
+<h1>Calculator </h1>
+<pre>
+            Enter 1st value : <input type="number" name=num1  [(ngModel)]='num1'>
+            Enter 2nd value : <input type="number" name=num2   [(ngModel)]='num2'>
+            Result : {{result}}
+</pre>
+<button class="btn btn-primary" (click)="operation('+')">Add</button>
+<button class="btn btn-secondary" (click)="operation('*')">Multi</button>
+<button class="btn btn-success" (click)="operation('-')">Sub</button>
+<button class="btn btn-danger" (click)="operation('/')">Div</button> 

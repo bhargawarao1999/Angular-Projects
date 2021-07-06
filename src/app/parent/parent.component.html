@@ -1,0 +1,6 @@
+<div>
+    <h1>Parent Component</h1>
+   <h3> Child after investing:{{parentData}} </h3>
+    <app-child [investing]='allowance' [childAllowance] ='allowance' (notify)='parentMethod($event)'></app-child>
+
+</div>

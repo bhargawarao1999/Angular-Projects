@@ -1,0 +1,5 @@
+[
+    {"id":1,"name":"Laptop","price":50000,"description":"A Laptop","image":"assets/images/laptop.png"},
+    {"id":2,"name":"Mouse","price":500,"description":"A Mouse","image":"assets/images/mouse.png"},
+    {"id":3,"name":"Keyboard","price":1500,"description":"A Keyboard","image":"assets/images/keyboard.jpg"}
+]

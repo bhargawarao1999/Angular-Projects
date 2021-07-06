@@ -1,0 +1,19 @@
+<h2>First Component</h2><hr>
+<hr>
+<table>
+    <th>
+        Product ID 1
+    </th>
+    <th>
+        Product Name 1
+    </th>
+    <tr *ngFor = 'let product of products'>
+        <td>
+            {{product.id}}
+        </td>
+        <td>
+            {{product.productName}}
+        </td>
+    </tr>
+</table>
+<button (click)='modifiedData()'>Click Here</button>

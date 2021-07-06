@@ -1,0 +1,38 @@
+<h2> Java Component </h2>
+    <a [routerLink] = "['corejava']" routerLinkActive='active'>Core Java</a> | 
+	<a [routerLink] = '["advjava"]' routerLinkActive='active'>Adv Java</a>
+<table class="table table-bordered">
+    
+    <tr>
+        <th scope="col">
+            <p appDerivative>Search java:</p>
+        </th>
+        <td><input type="text" class="form-control" placeholder="Search" [(ngModel)]="filteredString" /></td>
+        <th><p>Sort Data:</p></th>
+        <td scope="col">
+             <select class="form-control" [value]="'a-z'" [(ngModel)]="sortedString">
+                <option [value]="'a-z'">A-Z</option>
+                <option [value]="'z-a'">Z-A</option>
+                <option [value]="'low'">Low Price to High Price</option>
+                <option [value]="'high'">High Price-Low Price</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Java Id</th>
+        <th scope="col">Java Name</th>
+        <th scope="col">Java Price</th>
+        <th scope="col">Java Description</th>
+        <th scope="col">Java Version Image</th>
+    </tr>
+    <tr appDerivative *ngFor='let java of javaArray | filterPipe:filteredString |sort:sortedString '>
+
+        <td scope="row">{{java.id}}</td>
+        <td> {{java.name | titlecase}} </td>
+        <td> {{java.price}} </td>
+        <td> {{java.description}} </td>
+        <td> <img [src]='java.image' width="150" height="100"></td>
+    </tr>
+</table>
