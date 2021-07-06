@@ -40,21 +40,20 @@
 
             <div class='form-group'>
                 <label>PostalCode</label><input type='text' #postalRef='ngModel' class='form-control' name='PostalCode'
-                    ngModel minlength="3" maxlength="20" pattern="/^-?(0|[1-9]\d*)?$/]">
+                    ngModel minlength="3" maxlength="20">
             </div>
             <div *ngIf='postalRef.errors && (postalRef.touched || postalRef.dirty)' class='text text-danger'>
 
                 <div [hidden]='!postalRef.errors.required'>Please enter postal code</div>
                 <div [hidden]='!postalRef.errors.minlength'>Please enter atlest 3 numbers</div>
-                <div [hidden]='!postalRef.errors.pattern'>Invalid Postal Code</div>
-    
-            </div>
-            <div *ngIf='nameRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
 
-                <div [hidden]='!nameRef.errors.required'>Please enter name</div>
-                <div [hidden]='!nameRef.errors.minlength'>Please enter atlest 5 characters</div>
-                <div [hidden]='!nameRef.errors.pattern'>Invalid User name</div>
-    
+            </div>
+            <div *ngIf='cityRef.errors && (cityRef.touched || cityRef.dirty)' class='text text-danger'>
+
+                <div [hidden]='!cityRef.errors.required'>Please enter name</div>
+                <div [hidden]='!cityRef.errors.minlength'>Please enter atlest 5 characters</div>
+                <div [hidden]='!cityRef.errors.pattern'>Invalid name</div>
+
             </div>
         </div>
         <div *ngIf='nameRef.errors && (nameRef.touched || nameRef.dirty)' class='text text-danger'>
@@ -64,8 +63,8 @@
             <div [hidden]='!nameRef.errors.pattern'>Invalid User name</div>
 
         </div>
-        
-        
+
+
         <button [disabled]='!userForm.form.valid' type='submit' class='btn btn-success'>Submit</button>
     </form>
 </div>
