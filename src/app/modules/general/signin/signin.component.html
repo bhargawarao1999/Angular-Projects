@@ -1,0 +1,20 @@
+<h2> Web </h2>
+<!-- <a [routerLink] = "['html']" routerLinkActive='active'>HTML</a> | 
+	<a [routerLink] = '["css"]' routerLinkActive='active'>CSS</a> -->
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Web Id</th>
+        <th scope="col">Web Name</th>
+        <th scope="col">Web Price</th>
+        <th scope="col">Web Description</th>
+        <th scope="col">Web Image</th>
+    </tr>
+    <tr appDerivative *ngFor='let web of webArray '>
+
+        <td scope="row">{{web.webID}}</td>
+        <td> {{web.name | titlecase}} </td>
+        <td> {{web.price}} </td>
+        <td> {{web.description}} </td>
+        <td> <img [src]='web.image' width="150" height="100"></td>
+    </tr>
+</table>

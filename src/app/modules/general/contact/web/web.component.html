@@ -1,0 +1,36 @@
+<h2> Web </h2>
+<table class="table table-bordered">
+    
+    <tr>
+        <th scope="col">
+            <p appDerivative>Search Web:</p>
+        </th>
+        <td><input type="text" class="form-control" placeholder="Search" [(ngModel)]="filteredString" /></td>
+        <th><p>Sort Data:</p></th>
+        <td scope="col">
+             <select class="form-control" [value]="'a-z'" [(ngModel)]="sortedString">
+                <option [value]="'a-z'">A-Z</option>
+                <option [value]="'z-a'">Z-A</option>
+                <option [value]="'low'">Low Price to High Price</option>
+                <option [value]="'high'">High Price-Low Price</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Web Id</th>
+        <th scope="col">Web Name</th>
+        <th scope="col">Web Price</th>
+        <th scope="col">Web Description</th>
+        <th scope="col">Web Image</th>
+    </tr>
+    <tr appDerivative *ngFor='let web of webArray | search:filteredString |sortpipe:sortedString'>
+
+        <td scope="row">{{web.webID}}</td>
+        <td> {{web.name | titlecase}} </td>
+        <td> {{web.price}} </td>
+        <td> {{web.description}} </td>
+        <td> <img [src]='web.image' width="150" height="100"></td>
+    </tr>
+</table>

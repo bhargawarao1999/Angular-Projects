@@ -18,16 +18,17 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { WebComponent } from './web/web.component';
-import { JavaComponent } from './java/java.component';
-import { routingComponents, TechRoutingModule } from './tech-routing/tech-routing.module';
-import { CoreJavaComponent } from './core-java/core-java.component';
-import { AdvJavaComponent } from './adv-java/adv-java.component';
-import { HtmlCourseComponent } from './html-course/html-course.component';
-import { CssCourseComponent } from './css-course/css-course.component';
+import { WebComponent } from './tech/web/web.component';
+import { JavaComponent } from './tech/java/java.component';
+import { TechRoutingModule } from './tech/tech-routing.module';
+import { CoreJavaComponent } from './tech/core-java/core-java.component';
+import { AdvJavaComponent } from './tech/adv-java/adv-java.component';
+import { HtmlCourseComponent } from './tech/html-course/html-course.component';
+import { CssCourseComponent } from './tech/css-course/css-course.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ModelDrivenComponent } from './model-driven/model-driven.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './modules/general/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,10 +54,11 @@ import { ModelDrivenComponent } from './model-driven/model-driven.component';
     HtmlCourseComponent,
     CssCourseComponent,
     TemplateDrivenComponent,
-    ModelDrivenComponent
+    ModelDrivenComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule,TechRoutingModule,ReactiveFormsModule
+    BrowserModule, FormsModule, HttpClientModule,TechRoutingModule,ReactiveFormsModule,BrowserModule,AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

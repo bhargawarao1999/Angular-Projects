@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">All Concept Baba</a>
@@ -12,7 +12,7 @@
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
 <!-- <app-bhargawa></app-bhargawa> -->
 <!-- <app-interpolation-binding></app-interpolation-binding> -->
@@ -32,3 +32,51 @@
 <h1><app-second></app-second></h1> -->
 <!-- <app-template-driven></app-template-driven> -->
 <!-- <app-model-driven></app-model-driven> -->
+
+<!-- <nav>
+<a routerLink="/home/picture"> Pictures</a>
+</nav>
+<nav>
+  <a routerLink="/calculator"> Calculator</a>
+</nav>
+<h1 style="text-align: center">
+  <router-outlet></router-outlet>
+</h1> -->
+
+<!-- <div class="app">
+  <header>
+    <section>
+      <h1>{{ title }}</h1>
+    </section>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">Product</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <a href="https://www.ganatan.com/">&copy; 2021 - www.ganatan.com</a>
+  </footer>
+
+</div> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a routerLink="/" routerLinkActive='active'>Home</a></li>
+        <li><a routerLink="/about" routerLinkActive='active'>Product</a></li>
+        <li><a routerLink="/contact" routerLinkActive='active'>Tech</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

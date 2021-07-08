@@ -1,5 +1,5 @@
 [
     {"id":1,"name":"Java Servlet API","price":10000,"description":"The Java Servlet API lets you define HTTP-specific classes","image":"assets/images/javaservelets.png"},
-    {"id":2,"name":"JavaServer Pages","price":20000,"description":"Servlets and JSPs are considered outdated technologies and no longer chosen for the new projects.","image":"assets/images/javaserverpages.png"},
-    {"id":3,"name":"JavaServer Faces ","price":15000,"description":"Java Server Faces (JSF) is a Java-based web application framework intended to simplify development integration of web-based user interfaces.","image":"assets/images/javaserverfaces.png"}
+    {"id":2,"name":"Java Server Pages","price":20000,"description":"Servlets and JSPs are considered outdated technologies and no longer chosen for the new projects.","image":"assets/images/javaserverpages.png"},
+    {"id":3,"name":"Java Server Faces ","price":15000,"description":"Java Server Faces (JSF) is a Java-based web application framework intended to simplify development integration of web-based user interfaces.","image":"assets/images/javaserverfaces.png"}
 ]

@@ -1,0 +1,36 @@
+<h2> Products </h2>
+<table class="table table-bordered">
+    
+    <tr>
+        <th scope="col">
+            <p appDerivative>Search Product:</p>
+        </th>
+        <td><input type="text" class="form-control" placeholder="Search" [(ngModel)]="filteredString" /></td>
+        <th><p>Sort Data:</p></th>
+        <td scope="col">
+             <select class="form-control" [value]="'a-z'" [(ngModel)]="sortedString">
+                <option [value]="'a-z'">A-Z</option>
+                <option [value]="'z-a'">Z-A</option>
+                <option [value]="'low'">Low Price to High Price</option>
+                <option [value]="'high'">High Price-Low Price</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Product Description</th>
+        <th scope="col">Product Image</th>
+    </tr>
+    <tr appDerivative *ngFor='let product of productsArray | search:filteredString |sortpipe:sortedString'>
+
+        <td scope="row">{{product.id}}</td>
+        <td> {{product.name | titlecase}} </td>
+        <td> {{product.price}} </td>
+        <td> {{product.description}} </td>
+        <td> <img [src]='product.image' width="150" height="100"></td>
+    </tr>
+</table>
